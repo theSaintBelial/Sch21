@@ -10,9 +10,11 @@ int main()
 
     for (i = 1; i < 10; i++)
     {
-        printf("%d  %4d  %6d\n", i, power(2,i), power(-3,i));
+        printf("%d  %4d %6d\n", i, power(2,i), power(-3,i));
     }
     
+
+   //printf("%d\n", power(2, 0));
     return (0);
 }
 
