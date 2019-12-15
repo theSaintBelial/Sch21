@@ -40,7 +40,7 @@ int count_all()
         }       
     }
 
-    printf("Hw mny Digits:");
+    printf("Hw mny Digits:\n");
     for (i = 0; i < 10; i++)
     {
         printf("\n%d  ", i);
