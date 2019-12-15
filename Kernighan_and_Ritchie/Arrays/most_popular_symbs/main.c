@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int count_all(); // подсчет цифр, символов-разделителей и проч симв
+int count_all(); // гистограмма наиболее часто встречающихся цифр и вывод количества др символов
 
 int main()
 {
@@ -40,11 +40,12 @@ int count_all()
         }       
     }
 
-    printf("Digits: 0 1 2 3 4 5 6 7 8 9\n");
-    printf("Hw mny: ");
+    printf("Hw mny Digits:");
     for (i = 0; i < 10; i++)
     {
-        printf("%d ", ndigit[i]);
+        printf("\n%d  ", i);
+        for(int j = 1; j <= ndigit[i]; j++)
+            printf("-");
     }
     printf("\nHw mny Separators: %d\nHw mny other symbs: %d", nwhite, nother);
   
