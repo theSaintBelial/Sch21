@@ -21,16 +21,7 @@ int main()
 int power(int base, int index)
 {
     int result, i;
-    result = 1;
-    if (index >= 1)
-    {
-        for (i = 1; i <= index; i++)
-            result*=base;
-    }
-    else
-    {
-        printf("Ur degree must be more than 0.\n");
-        return (0);
-    }
+    for (result = 1; index > 0; index--)
+        result*=base;
     return (result);
 }
