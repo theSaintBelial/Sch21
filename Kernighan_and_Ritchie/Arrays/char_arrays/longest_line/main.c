@@ -5,10 +5,12 @@
 int getline(char linef[], int lim); // получает строку
 int copy(char to[], char from[]); // копирует
 int print_longest_string(); // печатает самую длинную строчку из вводимых
+int print_more_50(); // печатает все строки, содержащие больше 80 символов
 
 int main()
 {
     print_longest_string();
+    print_more_50();
 
     return (0);
 }
@@ -61,8 +63,34 @@ int print_longest_string()
 
     if (max_len > 0)
     {
-        printf("The longest line: %s\nIts length: %d\n\n", longest, max_len);
+        printf("The longest line: %s\nIts length: %d\n", longest, max_len);
     }
     
+    return (0);
+}
+
+int print_more_50()
+{
+    printf("\nPrinting all lines more than 50 symbols.\n");
+
+    int len, max_len;
+    char line[MAXLINE];
+
+    max_len = 0;
+
+    while((len = getline(line, MAXLINE)) > 0)
+    {
+        if (len > max_len)
+        {
+            max_len = len;
+        }
+        if (len > 50)
+        {
+            printf("\nLine more than 50 symbols: %s\nIts length: %d", line, len);
+        }
+    }
+    if (max_len < 50)
+        printf("U haven't entered any line more than 50 symbols.\n");
+
     return (0);
 }
