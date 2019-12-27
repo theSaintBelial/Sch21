@@ -8,6 +8,7 @@ int get_clear_line(); // получает строку из ввода
 int main()
 {
     get_clear_line();
+    
     return (0);
 }
 
