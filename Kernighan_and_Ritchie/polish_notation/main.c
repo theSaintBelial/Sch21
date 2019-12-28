@@ -1,10 +1,8 @@
 #include <stdio.h>
-#include <stdlib.h> // для atof
+#include <stdlib.h>
 #include "calc.h"
 
-#define MAXOP 100 // макс размер операнда или оператора
-
-//калькулятор с обратной польской записью
+#define MAXOP 100
 
 int main()
 {
@@ -15,34 +13,33 @@ int main()
     {
         switch (type)
         {
-        case NUMBER:
-            push(atof(s));
-            break;
-        case '+':
-            push(pop() + pop());
-            break;
-        case '*':
-            push(pop()*pop());
-            break;
-        case '-':
-            op2 = pop();
-            push(pop()-op2);
-            break;
-        case '/':
-            op2 = pop();
-            if (op2 != 0.0)
-                push(pop() / op2);
-            else
-                printf("error: division by zero\n");
-            break;
-        case '\n':
-            printf("\t%.8g\n", pop());
-            break;
-        default:
-            printf("error: unknown operation %s\n", s);
-            break;
+            case NUMBER:
+                push(atof(s));
+                break;
+            case '+':
+                push(pop() + pop());
+                break;             
+            case '*':
+                push(pop() * pop());
+                break;      
+            case '-':
+                op2 = pop();
+                push(pop() - op2);
+                break;                       
+            case '/':
+                op2 = pop();
+                if (op2 != 0.0)
+                    push(pop() / op2);
+                else
+                    printf("error: division by zero\n");
+                break;          
+            case '\n':
+                printf("\nResult is:  %.8g\n", pop());
+                break;
+            default:
+                printf("error: unknown operation %s\n", s);
+                break;
         }
     }
-
-    return (0);
+        return (0);
 }

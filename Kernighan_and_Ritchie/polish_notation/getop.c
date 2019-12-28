@@ -6,24 +6,24 @@ int getop(char s[]) // получает след оператор или опе�
 {
     int i, c;
 
-    while((s[0] = c = getch()) == ' ' || c == '\t')
+    while ((s[0] = c = getch()) == ' ' || c == '\t')
         ;
     s[1] = '\0';
-    if(!isdigit(c) && c != '.')
-        return (c); // не число
+    if (!isdigit(c) && c != '.')
+        return (c);
     i = 0;
-    if (isdigit(c)) // накапливаем целую часть
+    if (isdigit(c))
     {
-        while(isdigit(s[++i] = c = getch()))
+        while (isdigit(s[++i] = c = getch()))
             ;
     }
-    if(c == '.') // накапливаем дробную часть
+    if (c == '.')
     {
         while (isdigit(s[++i] = c = getch()))
             ;
     }
     s[i] = '\0';
-    if(c != EOF)
+    if (c != EOF)
         ungetch(c);
-    return NUMBER;
+    return (NUMBER);
 }

@@ -8,7 +8,7 @@ double val[MAXVAL]; // стек
 
 void push(double f) // положить новое значение в стек
 {
-    if(sp < MAXVAL)
+    if (sp < MAXVAL)
         val[sp++] = f;
     else
         printf("error: stack is full, %d cannot be placed\n", f);
@@ -16,7 +16,7 @@ void push(double f) // положить новое значение в стек
 
 double pop(void) // взять с вершины стека и выдать в качестве результата
 {
-    if(sp > 0)
+    if (sp > 0)
         return (val[--sp]);
     else
     {
