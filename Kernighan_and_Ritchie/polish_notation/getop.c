@@ -5,8 +5,18 @@
 int getop(char s[]) // получает след оператор или операнд
 {
     int i, c;
+    static int last_c = 0;
 
-    while ((s[0] = c = getch()) == ' ' || c == '\t')
+    if (last_c == 0)
+        c = getch();
+    else
+    {
+        c = last_c;
+        last_c = 0;
+    }
+    
+
+    while (s[0] = c == ' ' || c == '\t')
         ;
     s[1] = '\0';
     if (!isdigit(c) && c != '.')
@@ -24,6 +34,6 @@ int getop(char s[]) // получает след оператор или опе�
     }
     s[i] = '\0';
     if (c != EOF)
-        ungetch(c);
+        last_c = c;
     return (NUMBER);
 }
