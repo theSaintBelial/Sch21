@@ -25,5 +25,5 @@ int getop(char* s)
     *(s + i) = '\0';
     if (c != EOF)
         ungetch(c);
-    return (NUMBER);
+    return NUMBER;
 }
