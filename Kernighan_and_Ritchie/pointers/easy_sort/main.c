@@ -3,7 +3,7 @@
 
 #define MAXLINES 5000 // макс число строк
 
-char* lineptr[MAXLINES]; // указатели на строки
+static char* lineptr[MAXLINES]; // указатели на строки
 
 int readlines(char* lineptr[], int nlines);
 void writelines(char* lineptr[], int nlines);
