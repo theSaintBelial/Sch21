@@ -14,7 +14,6 @@ int main()
 {
     int day, month, year, yearday;
     int key = 5;
-    char key2;
 
     int new_day = 0;
     int new_month = 0;
@@ -53,9 +52,11 @@ int main()
         }
         if(key != 0)    
         {
+            char key2;
             printf("\nDo u want to run this program again? ([y] or [n]):  ");
-            scanf("%c", &key2);
-            if (key2 == 'y')
+            scanf(" %c", &key2);
+            if (key2 == 'n')
+                printf("\nC u soon!\n");
                 return (0);
             if (key2 != 'y' && key2 != 'n')
             {    
