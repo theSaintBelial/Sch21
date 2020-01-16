@@ -10,11 +10,14 @@ char day_number[2][13] = {
 int day_year(int year, int month, int day);
 void day_month(int yearday, int year, int *pday, int *pmonth);
 
+int key;
+
 int main()
 {
     int day, month, year, yearday;
-    int key = 5;
     char key2;
+
+    key = 5;
 
     int new_day = 0;
     int new_month = 0;
@@ -46,23 +49,22 @@ int main()
             break;
         case 0:
             printf("\nC u soon!\n");
-            break;
+            return (0);
         default:
             printf("\nerror: u r a fcking stupid kid!\nOoops, I wanted to say that something had gone wrong. Pls, try again.\n");
             break;
         }
-        if(key != 0)    
+        printf("\nDo u want to run this program again? ([y] or [n]):  ");
+        scanf(" %c", &key2);
+        if (key2 == 'n')
         {
-            printf("\nDo u want to run this program again? ([y] or [n]):  ");
-            scanf(" %c", &key2);
-            if (key2 == 'n')
-                printf("\nC u soon!\n");
-                return (0);
-            if (key2 != 'y' && key2 != 'n')
-            {    
-                printf("\nerror: exactly, u r a fcking stupid kid!\n");
-                break;
-            }
+            printf("\nC u soon!\n");
+            return (0);
+        }
+        if (key2 != 'y' && key2 != 'n')
+        {    
+            printf("\nerror: exactly, u r a fcking stupid kid!\n");
+            break;
         }
     }
     return (0);
