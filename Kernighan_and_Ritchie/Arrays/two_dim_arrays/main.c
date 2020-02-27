@@ -10,17 +10,16 @@ char day_number[2][13] = {
 int day_year(int year, int month, int day);
 void day_month(int yearday, int year, int *pday, int *pmonth);
 
-int key;
 
 int main()
 {
-    int day, month, year, yearday;
+    int day, month, year, yearday, key, new_day, new_month;
     char key2;
 
     key = 5;
 
-    int new_day = 0;
-    int new_month = 0;
+    new_day = 0;
+    new_month = 0;
 
     while (key != 0)
     {
@@ -73,12 +72,12 @@ int main()
 
 int day_year(int year, int month, int day)
 {
-    int leap = year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
+    int leap = year % 4 == 0 && year % 100 != 0 || year % 400 == 0;   
+    
     unsigned int yearday = day;
 
     for (int i = 0; i < month; i++)
-        yearday += day_number[leap][i];
-
+        yearday += day_number[leap][i];	
     return (yearday);
 }
 
