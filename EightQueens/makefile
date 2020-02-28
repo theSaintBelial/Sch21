@@ -10,11 +10,11 @@ $(NAME): setup.py eightqueens.pyx $(LIB_DIR)/libeq.a
 $(LIB_DIR)/libeq.a:
 	make -C $(LIB_DIR) libeq.a
 
-clean: $(LIB_DIR)/clean
+clean: $(LIB_DIR)/fclean
 	rm *.so
 
-$(LIB_DIR)/clean:
-	make -C $(LIB_DIR) clean
+$(LIB_DIR)/fclean:
+	make -C $(LIB_DIR) fclean
 
 make fclean: clean libclean
 

@@ -1,4 +1,6 @@
 
 import eightqueens as eq
 
-eq.eight_queens()
+N = 13
+
+eq.eight_queens(N)

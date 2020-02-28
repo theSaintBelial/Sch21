@@ -7,6 +7,6 @@
 # include <stdlib.h>
 # include <stdio.h>
 
-void ft_eight_queens_puzzle_2();
+void ft_eight_queens_puzzle_2(int N);
 
 #endif

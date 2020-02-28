@@ -14,7 +14,15 @@ $(NAME): $(OBJ)
 $(OBJ): $(SRC) $(HDR)
 	gcc -c $<
 
+exec:
+	gcc -o eightqueens.out $(SRC)
+
 clean:
 	rm *.o *.a
+
+clean_exec:
+	rm *.out
+
+fclean: clean clean_exec
 
 re: clean all
