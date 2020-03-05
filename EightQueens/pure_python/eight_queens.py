@@ -56,7 +56,7 @@ def eight_queens(Tab, y, N):
 def main():
 	global decision_count
 
-	N = 13
+	N = 10
 	Tab = [[False] * N for y in range(N)]
 	# print("There are all posible solutions below:")
 	eight_queens(Tab, 0, N)

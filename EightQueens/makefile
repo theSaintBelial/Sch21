@@ -15,7 +15,5 @@ clean: $(LIB_DIR)/fclean
 
 $(LIB_DIR)/fclean:
 	make -C $(LIB_DIR) fclean
-
-make fclean: clean libclean
-
+	
 re: fclean all
