@@ -59,13 +59,15 @@ void    ft_brain_fuck(char *oper)
             write(1, cache + pointer, 1);
         else if (oper[i] == '[')
         {
-            if (cache[pointer] == 0)
-                i = matching(oper, i);
-        }
+			if (cache[pointer] == 0)
+				i = matching(oper, i);
+		}
         else if (oper[i] == ']')
-            if (cache[pointer] != 0)
-                i = matching(oper, i);
-        i++;
+        {
+			if (cache[pointer] != 0)
+    	       i = matching(oper, i);
+		}
+    	i++;
     }
 }
 
