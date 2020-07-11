@@ -1,0 +1,3 @@
+/home/svatostop/CLionProjects/ft_printf2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/svatostop/CLionProjects/ft_printf2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/svatostop/CLionProjects/ft_printf2/cmake-build-debug/CMakeFiles/ft_printf2.dir
